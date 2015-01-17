@@ -8,7 +8,7 @@ name = HPGL Plotter
 authorList = [David Sjunnesson](www.davidsjunnesson.com)
 
 # A web page for your library, NOT a direct link to where to download it.
-url = none
+url = http://sjunnesson.github.io/HPGL-Plotter/
 
 # The category of your library, must be one (or many) of the following:
 #   "3D"            "Animation"     "Compilations"      "Data"          
