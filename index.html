@@ -1,105 +1,151 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
 <head>
-<title>HPGL Plotter</title>
-<meta name="description" content="A library for the Processing programming environment" />
-<meta name="keywords" content="processing.org, library, ?" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Language" content="en-us" />
-<meta name="ROBOTS" content="index,follow,archive" />
-<meta http-equiv="imagetoolbar" content="false" />
-<meta name="MSSmartTagsPreventParsing" content="true" />
-<meta name="author" content="David Sjunnesson" />
-<meta name="Rating" content="General" />
-<meta name="revisit-after" content="7 Days" />
-<meta name="doc-class" content="Living Document" />
-<link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    <title>HPGL Plotter</title>
+    <meta name="description" content="A library for the Processing programming environment" />
+    <meta name="keywords" content="processing.org, library, Plotter,HP7550a,drawing" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="ROBOTS" content="index,follow,archive" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="author" content="David Sjunnesson" />
+    <meta name="Rating" content="General" />
+    <meta name="revisit-after" content="7 Days" />
+    <meta name="doc-class" content="Living Document" />
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
 </head>
+
 <body>
-	<div id="container">
-	
-		<div id="header">
-			<h1>HPGL Plotter</h1>
-		</div>
-		
-		<div id="menu" class="clear">
-			<ul>
-				<li><a href="#about">About</a> \ </li>
-				<li><a href="#download">Download</a> \ </li>
-				<li><a href="#download">Installation</a> \ </li>
-				<li><a href="#examples">Examples</a> \ </li>
-				<li><a href="./reference/index.html" target="_blank">Reference</a></li>
-				<!-- <li><a href="#demos">Demos</a> \ </li> -->				
-				<!-- <li><a href="#misc">Misc</a> \ </li> -->
-				<!-- <li><a href="#images">Images</a> \ </li> -->
-			</ul>
-		</div>
-		
-		<div id="content" class="clear">
-			
-			<div id="about">
-			<h2>HPGL Plotter</h2>
-			<p>
-			A library by <a href="http://www.davidsjunnesson.com">David Sjunnesson</a> for the <a href="http://www.processing.org" target="_blank">Processing</a> programming environment.<br>
-			Last update, 01/17/2015.
-			</p>
-			<p>
-			A library to interface with HPGL plotters such as HP7550a.<br>
-			It is only tested on OSX and with a HP7550a plotter.<br>
-			Feel free to replace this paragraph with a description of the library.<br>
-			Contributed libraries are developed, documented, and maintained by members of the Processing community. Further directions are included with each library. For feedback and support, please post to the Discourse. We strongly encourage all libraries to be open source, but not all of them are.
-			</p>
-			</div>
-			
-			
-			
-			<div id="download" class="clear">
-			<h2>Download</h2>
-			<p>
-			Download HPGL Plotter version 1.0.0 (1) in 
-			<a href="./download/HPGL_Plotter-1.zip">.zip format</a>.
-			</p>
-			<h2>Installation</h2>
-			<p>
-			Unzip and put the extracted HPGL_Plotter folder into the libraries folder of your Processing sketches. Reference and examples are included in the HPGL_Plotter folder.
-			</p>
-			</div>	
-			
-			
-			<div id="resources">
-			<p><strong>Keywords</strong>. ?</p>
-			<p><strong>Reference</strong>. Have a look at the javadoc reference <a href="./reference/index.html" target="_blank">here</a>. A copy of the reference is included in the .zip as well.</p>		
-			<p><strong>Source</strong>. The source code of HPGL Plotter is available at <a href="https://github.com/sjunnesson/Plotter-P5">GitHub</a>, and its repository can be browsed <a href="https://github.com/sjunnesson/Plotter-P5.git" target="_blank">here</a>.</p>			
-			</div>
-			
-			
-			<div id="examples" class="clear">
-			<h2>Examples</h2>
-			<p>Find a list of examples in the current distribution of HPGL Plotter, or have a look at them by following the links below.</p>
-			<ul>
-			<li><a href="examples/PlotterCircles/PlotterCircles.pde">PlotterCircles</a></li> <li><a href="examples/PlotterLabels/PlotterLabels.pde">PlotterLabels</a></li> 
-			</ul>
-			</div>
-			
-			
-			<div id="info">
-			<h2>Tested</h2>
-			<p>
-			<!-- on which platform has the library been tested? -->
-			<strong>Platform</strong> osx
-			
-			<!-- which processing version did you use for testing your library? -->
-			<br /><strong>Processing</strong> 1.5
-			
-			<!-- does your library depend on any other library or framework? -->
-			<br /><strong>Dependencies</strong> Serial
-			</p>
-			</div>
-		
-			
-			<!-- use the demos section for a list of applets run in a browser. -->
-			<!--
+    <div id="container">
+
+        <div id="header">
+            <h1>HPGL Plotter</h1>
+        </div>
+
+        <div id="menu" class="clear">
+            <ul>
+                <li><a href="#about">About</a> \</li>
+                <li><a href="#download">Download</a> \</li>
+                <li><a href="#download">Installation</a> \</li>
+                <li><a href="#hardware">Hardware</a> \</li>
+                <li><a href="#examples">Examples</a> \</li>
+                <li><a href="./reference/index.html" target="_blank">Reference</a>
+                </li>
+                <!-- <li><a href="#demos">Demos</a> \ </li> -->
+                <!-- <li><a href="#misc">Misc</a> \ </li> -->
+                <!-- <li><a href="#images">Images</a> \ </li> -->
+            </ul>
+        </div>
+
+        <div id="content" class="clear">
+
+            <div id="about">
+                <h2>HPGL Plotter</h2>
+                <p>
+                    A library by <a href="http://www.davidsjunnesson.com">David Sjunnesson</a> for the <a href="http://www.processing.org" target="_blank">Processing</a> programming environment.
+                    <br>Last update, 01/17/2015.
+                </p>
+                <p>
+                    A library to interface with HPGL plotters such as HP7550a.
+                    <br>It is only tested on OSX and with a HP7550a plotter.
+                    <br>
+
+                </p>
+            </div>
+
+
+
+            <div id="download" class="clear">
+                <h2>Download</h2>
+                <p>
+                    Download HPGL Plotter version 1.0.0 (1) in
+                    <a href="./download/HPGL_Plotter-1.zip">.zip format</a>.
+                </p>
+                <h2>Installation</h2>
+                <p>
+                    Unzip and put the extracted HPGL_Plotter folder into the libraries folder of your Processing sketches. Reference and examples are included in the HPGL_Plotter folder.
+                </p>
+            </div>
+
+            <div id="hardware" class="clear">
+                <h2>Hardware</h2>
+                <p>
+                    You need a USB to DB25 converter to interface to a HP7550a. Im using <a href="http://www.amazon.com/gp/product/B00NHYTE7Q/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">this</a> bought at Amazon.
+                    <br>It has the ch340 chipset inside that needs <a href="http://www.wch.cn/downloads.php?name=pro&proid=5">this</a> drivers from the Chinese manufacturer
+                    <br>On OSX you need to do this sequence originaly created by <a href="http://javacolors.blogspot.com/2014/08/dccduino-usb-drivers-ch340-ch341-chipset.html">Alexandre de Pellegrin</a> 
+                    <ol>
+                        <li>Install the CH340 driver</li>
+                        <li>Run this command in Terminal: sudo nvram boot-args="kext-dev-mode=1"</li>
+                        <li>Reboot your computer</li>
+                    </ol>
+                    <br>
+                    On the Plotter you need to setup this configuration
+                    <br>
+                    <ul>
+                        <li>Baudrate 9600</li>
+                        <li>Handshake: Xon/Xoff Direct</li>
+                        <li>Data flow: Local Standalone (this seems to reset after power down of plotter on my machine)</li>
+                        <li>Bypass: OFF</li>
+                        <li>Duplex: Full</li>
+                        <li>Parity: 8-bits OFF</li>
+                    </ul>
+                    <br>
+                    To access the submenu for this settings on the HP7550a press:
+                    <ol>
+                        <li>"Next Display"</li>
+                        <li>"Enter"</li>
+                        <li>"Next Display"</li>
+                        <li>"Serial"</li>
+                    </ol>
+                </p>
+                <h2>Installation</h2>
+                <p>
+                    Unzip and put the extracted HPGL_Plotter folder into the libraries folder of your Processing sketches. Reference and examples are included in the HPGL_Plotter folder.
+                </p>
+            </div>
+
+
+            <div id="resources">
+                <p>
+                    <strong>Keywords</strong>. Plotter,HP7550a,drawing</p>
+                <p>
+                    <strong>Reference</strong>. Have a look at the javadoc reference <a href="./reference/index.html" target="_blank">here</a>. A copy of the reference is included in the .zip as well.</p>
+                <p>
+                    <strong>Source</strong>. The source code of HPGL Plotter is available at <a href="https://github.com/sjunnesson/HPGL-Plotter">GitHub</a>, and its repository can be browsed <a href="https://github.com/sjunnesson/HPGL-Plotter.git" target="_blank">here</a>.</p>
+            </div>
+
+
+            <div id="examples" class="clear">
+                <h2>Examples</h2>
+                <p>Find a list of examples in the current distribution of HPGL Plotter, or have a look at them by following the links below.</p>
+                <ul>
+                    <li><a href="examples/PlotterCircles/PlotterCircles.pde">PlotterCircles</a></li> <li><a href="examples/PlotterLabels/PlotterLabels.pde">PlotterLabels</a></li> 
+                </ul>
+            </div>
+
+
+            <div id="info">
+                <h2>Tested</h2>
+                <p>
+                    <!-- on which platform has the library been tested? -->
+                    <strong>Platform</strong>osx
+
+                    <!-- which processing version did you use for testing your library? -->
+                    <br />
+                    <strong>Processing</strong>1.5
+
+                    <!-- does your library depend on any other library or framework? -->
+                    <br />
+                    <strong>Dependencies</strong>Serial
+                </p>
+            </div>
+
+
+            <!-- use the demos section for a list of applets run in a browser. -->
+            <!--
 			<div id="demos" class="clear">
 				<h2>demos</h2>
 				<p>
@@ -111,27 +157,28 @@
 				</p>
 			</div>
 			-->
-			
-			<!-- use the misc section for other relevant information. Activate the link to the misc section in the menu above. -->
-			<!--
+
+            <!-- use the misc section for other relevant information. Activate the link to the misc section in the menu above. -->
+            <!--
 			<div id="misc" class="clear">
 				<p></p>
 			</div>
 			-->
-			
-			<!-- use the images/screenshots section. Activate the link to the misc section in the menu above. -->
-			<!--
+
+            <!-- use the images/screenshots section. Activate the link to the misc section in the menu above. -->
+            <!--
 			<div id="images" class="clear">
 			</div>
 			-->
-			
-			
-			<br class="clear" />
-		</div>
-		
-		<div id="footer">
-			<p>by David Sjunnesson, (c) 2015.</p>
-		</div>
-	</div>
+
+
+            <br class="clear" />
+        </div>
+
+        <div id="footer">
+            <p>by David Sjunnesson, (c) 2015.</p>
+        </div>
+    </div>
 </body>
+
 </html>
