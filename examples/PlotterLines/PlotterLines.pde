@@ -40,11 +40,11 @@ void setup() {
     line(width / 2, ((height / numLines) * i), (i * (width / numLines)), ((height / numLines) * i));
   }
   // draw a diagonal line
-  plotter.line(plotter.xMin, plotter.yMin, plotter.xMax, plotter.yMax);
+  plotter.line(0, 0, plotter.xMax, plotter.yMax);
   line(0, 0, width, height);
 
   // plot the label for this example
-  plotter.writeLabel(label, plotter.xMin+500, plotter.yMax+500);
+  plotter.writeLabel(label, plotter.xMin+500, plotter.yMax-500);
 }
 
 void draw() {
